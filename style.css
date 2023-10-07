@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:black ;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100vw;
+}
+.background{
+    background: url(images/header-image.png) no-repeat center;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.9;
+    font-family: 'Ubuntu', sans-serif;
+}
+.background::before{
+    content: "";
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101.2%;
+    height: 105.2%;
+    z-index: -1;
+}
+/*utility classes*/
+.flex{
+    display: flex;
+}
+.padding{
+    padding: 25px 15px;
+}
+
+/*navbar*/
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 0 10vw;
+}
+.navbar img{
+    padding: 40px 40px;
+    height: 9rem;
+}
+.English{
+    align-items: center;
+    height: 5vh;
+    margin-left: auto;
+    padding: 0 10px;
+    background-color: #00000036;
+    color: rgb(255,255,255);
+    border: 1.5px solid gray;
+    border-radius: 5px;
+}
+.English div{
+    margin: 0 5px;
+}
+.signin{
+    height: 5vh;
+    align-items: center;
+    margin: 0 15px;
+    padding: 0 10px;
+    background-color: red;
+    border: 2px solid red ;
+    color: rgb(255,255,255);
+    border-radius: 5px;
+}
+/*main*/
+.main{
+    margin-top: 20vh;
+}
+.heading{
+    margin: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    color:rgb(255,255,255) ;
+    font-size: 3.5rem;
+}
+.text{
+    margin: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    color:rgb(255,255,255) ;
+    margin: 2vh 0;
+    font-size: 1.5rem;
+}
+.email{
+    justify-content: center;
+}
+.email input{
+    width: 20vw;
+    align-items: center;
+    padding: 5px 5px;
+    background-color: #00000036;
+    color: white;
+    border: 2px solid grey;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+input::placeholder{
+    color: rgb(255,255,255);
+}
+.email i{
+    margin-left: 2px;
+}
+.getstarted{
+    font-size: larger;
+    height: 5vh;
+    align-items: center;
+    margin: 0 15px;
+    background-color: red;
+    border: 2px solid red ;
+    color: rgb(255,255,255);
+    border-radius: 3px;
+}
+.border{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 1.5vh;
+    background-color:rgb(35,35,35);
+    border: 2px solid rgb(35,35,35);
+}
+/*features*/
+.feature-imgright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-imgright .left{
+    margin: 10px 35px;
+    font-size: 1.5rem;
+}
+.feature-imgright .left h1{
+    margin: 10px 0;
+    font-size: 3rem;
+}
+.feature-imgright img{
+    height:25rem;
+    margin: 40px 25px;
+}
+/*info*/
+.info{
+    margin: 25px 0;
+    text-align: center;
+}
+.accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+.accordian li label::after{
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}  
+input[type="radio"]{
+    display: none;
+}
+.accordian .content{
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordian input[type="radio"]:checked+label+.content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordian input[type="radio"]:checked+label::after{
+    transform: rotate(135deg);
+}
+/*footer*/
+.footer{
+    padding: 25px 25px;
+    color: rgba(255,255,255,0.7);
+}
+.footer-text{
+    margin-left:16vw;
+    padding: 10px 0;
+}
+.footer-info{
+    justify-content: space-evenly;
+    padding: 20px 20px;
+}
+
+.footer-list li{
+    list-style: none;
+    padding: 10px 0;
+}
+.footer-list a{
+    color: rgba(255,255,255,0.7);
+}
+.footer-English{
+    align-items: center;
+    height: 5vh;
+    padding: 0 10px;
+    margin-left:16vw;
+    background-color: #00000036;
+    color: rgb(255,255,255);
+    border: 1.5px solid gray;
+    border-radius: 5px;
+}
+.footer-English div{
+    margin: 0 5px;
+}
+
+@media only screen and (max-width: 800px) {
+    .background{
+      width: 150vw;
+      height: 100%;
+    }
+    .background::before{
+        width: 150%;
+        height: 180%;
+    }
+    .border{
+        width: 150vw;
+    }
+    .features{
+        width: 150vw;
+    }
+  }
+
+@media only screen and (max-width: 650px) {
+    .background{
+      width: 260vw;
+    }
+    .background::before{
+        width: 260%;
+    }
+    .border{
+        width: 230vw;
+    }
+    .features{
+        width: 230vw;
+    }
+  }
